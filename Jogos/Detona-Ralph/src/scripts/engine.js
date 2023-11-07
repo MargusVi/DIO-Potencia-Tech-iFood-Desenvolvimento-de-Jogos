@@ -27,6 +27,7 @@ const state = {
       clearInterval(state.actions.countDownTimerId);
       clearInterval(state.actions.timerId);
       alert("Game Over! O seu resultado foi: " + state.values.result);
+      reset();
     }
   }
   
@@ -59,14 +60,26 @@ const state = {
             state.values.currentLives--;
             state.view.lives.textContent = 'x' + state.values.currentLives;
             state.values.hitPosition = null;
-            if(state.values.currentLives <= 0) {
+            if(state.values.currentLives === 0) {
                 clearInterval(state.actions.countDownTimerId);
                 clearInterval(state.actions.timerId);
                 alert("Game Over! O seu resultado foi: " + state.values.result);
+                reset();
             }
         }
       });
     });
+  }
+
+  function reset() {
+    state.values.curretTime = 60;
+    state.values.currentLives = 3;
+    state.values.result = 0;
+    state.view.score.textContent = state.values.result;
+    state.view.timeLeft.textContent = state. values.curretTime;
+    state.view.lives.textContent = 'x' + state.values.currentLives;
+    state.actions.timerId = setInterval(randomSquare, 1000);
+    state.actions.countDownTimerId = setInterval(countDown, 1000);
   }
   
   function initialize() {
