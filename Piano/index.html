@@ -20,33 +20,30 @@
         <header>
             <h2>Virtual Piano</h2>
             <div class="column volume-slider">
-                <span>Volume</span> <input type="range">
-            </div>
-            <div class="column keys-check">
-                <span>Teclas</span> <input type="checkbox" checked>
+                <span>Volume</span> <input type="range" min="0" max="1" value="0.5" step="any">
             </div>
         </header>
         <ul class="piano-keys">
-            <li class="key white"><span>a</span></li>
-            <li class="key black"><span>w</span></li>
-            <li class="key white"><span>s</span></li>
-            <li class="key black"><span>e</span></li>
-            <li class="key white"><span>d</span></li>
-            <li class="key black"><span>f</span></li>
-            <li class="key white"><span>t</span></li>
-            <li class="key black"><span>g</span></li>
-            <li class="key white"><span>y</span></li>
-            <li class="key black"><span>h</span></li>
-            <li class="key white"><span>u</span></li>
-            <li class="key black"><span>j</span></li>
-            <li class="key white"><span>k</span></li>
-            <li class="key black"><span>o</span></li>
-            <li class="key white"><span>l</span></li>
-            <li class="key black"><span>p</span></li>
-            <li class="key white"><span>;</span></li>
+            <li class="key white" data-keys="a"><span>a</span></li>
+            <li class="key black" data-keys="w"><span>w</span></li>
+            <li class="key white" data-keys="s"><span>s</span></li>
+            <li class="key black" data-keys="e"><span>e</span></li>
+            <li class="key white" data-keys="d"><span>d</span></li>
+            <li class="key black" data-keys="f"><span>f</span></li>
+            <li class="key white" data-keys="t"><span>t</span></li>
+            <li class="key black" data-keys="g"><span>g</span></li>
+            <li class="key white" data-keys="y"><span>y</span></li>
+            <li class="key black" data-keys="h"><span>h</span></li>
+            <li class="key white" data-keys="u"><span>u</span></li>
+            <li class="key black" data-keys="j"><span>j</span></li>
+            <li class="key white" data-keys="k"><span>k</span></li>
+            <li class="key black" data-keys="o"><span>o</span></li>
+            <li class="key white" data-keys="l"><span>l</span></li>
+            <li class="key black" data-keys="p"><span>p</span></li>
+            <li class="key white" data-keys=";"><span>;</span></li>
         </ul>
     </div>
 
-    <script src="./src/scripts/engine.js"></script>
+    <script src="./src/scripts/engine.js" defer></script>
 </body>
 </html>
