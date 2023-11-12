@@ -8,7 +8,6 @@ const state = {
         avatar: document.querySelector("#card-image"),
         name: document.querySelector("#card-name"),
         type: document.querySelector("#card-type"),
-
     },
     fieldCards: {
         player: document.querySelector("#player-field-card"),
@@ -24,7 +23,6 @@ const state = {
         button: document.querySelector("#next-duel"),
     }
 }
-
 
 const pathImages = "./src/assets/icons/";
 
@@ -60,7 +58,6 @@ async function getRandomCardId() {
     return cardData[randomIndex].id
 }
 
-
 async function createCardImage(IdCard, fieldSide) {
     const cardImage = document.createElement("img");
     cardImage.setAttribute("height", "100px");
@@ -77,7 +74,6 @@ async function createCardImage(IdCard, fieldSide) {
             setCardsField(cardImage.getAttribute("data-id"));
         });
     }
-
 
     return cardImage
 }
@@ -155,7 +151,6 @@ async function removeAllCardsImages() {
     imgElements = player1BOX.querySelectorAll("img");
     imgElements.forEach(img => img.remove());
 }
-
 
 async function drawSelectCard(index) {
     state.cardSprites.avatar.src = cardData[index].img;
